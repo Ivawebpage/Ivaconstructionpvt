@@ -110,6 +110,13 @@ nav ul li a:hover {
     border-radius: 50%;
     width: 250px; /* Set a maximum width for the CEO image */
 }
+#ceo-video video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
 
 /* Services Section */
 #services {
