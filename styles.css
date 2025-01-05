@@ -116,6 +116,23 @@ nav ul li a:hover {
     width: 100%;
     max-width: 100%;
     margin: 40px 0;
+    text-align: center; /* Center the video horizontally */
+}
+
+/* Video Styling for Full Responsiveness */
+#ceo-video video {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure the video scales properly */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Container for CEO Video */
+#ceo-video {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 40px 0;
     overflow: hidden; /* Prevents content from overflowing */
     text-align: center; /* Centers the video horizontally */
 }
