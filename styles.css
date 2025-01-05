@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
@@ -21,22 +22,21 @@ header {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
     font-size: 2rem;
-    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
     margin-top: 10px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -53,8 +53,8 @@ nav ul li a:hover {
 #home {
     background-color: #005a87;
     color: #fff;
-    padding: 60px 0;
     text-align: center;
+    padding: 60px 0;
 }
 
 #home .hero h2 {
@@ -82,8 +82,8 @@ nav ul li a:hover {
 /* About Us Section */
 #about {
     background-color: #fff;
-    padding: 60px 0;
     text-align: center;
+    padding: 60px 0;
 }
 
 #about h2 {
@@ -95,7 +95,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Added for responsive behavior */
+    flex-wrap: wrap;
 }
 
 .about-content p {
@@ -108,60 +108,40 @@ nav ul li a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
-    width: 250px; /* Set a maximum width for the CEO image */
+    width: 250px;
+    margin-bottom: 20px;
 }
-/* Container for CEO Video */
+
+/* CEO Video Section */
 #ceo-video {
     position: relative;
     width: 100%;
-    max-width: 100%;
     margin: 40px 0;
-    text-align: center; /* Center the video horizontally */
+    overflow: hidden;
+    text-align: center;
 }
 
-/* Video Styling for Full Responsiveness */
-#ceo-video video {
-    width: 100%;
-    height: auto;
-    max-width: 100%; /* Ensure the video scales properly */
-    border-radius: 5px; /* Optional: rounded corners */
-}
-
-/* Container for CEO Video */
-#ceo-video {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    margin: 40px 0;
-    overflow: hidden; /* Prevents content from overflowing */
-    text-align: center; /* Centers the video horizontally */
-}
-
-/* Aspect Ratio Container - 16:9 */
 #ceo-video::before {
     content: '';
     display: block;
-    padding-top: 56.25%; /* Aspect ratio for 16:9 (height/width * 100) */
+    padding-top: 56.25%; /* 16:9 aspect ratio */
 }
 
-/* Video Styling */
 #ceo-video video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the container */
-    border-radius: 5px; /* Optional: rounded corners for the video */
+    object-fit: cover;
+    border-radius: 5px;
 }
-
-
 
 /* Services Section */
 #services {
     background-color: #f9f9f9;
-    padding: 60px 0;
     text-align: center;
+    padding: 60px 0;
 }
 
 #services h2 {
@@ -181,8 +161,8 @@ nav ul li a:hover {
 /* Projects Section */
 #projects {
     background-color: #fff;
-    padding: 60px 0;
     text-align: center;
+    padding: 60px 0;
 }
 
 #projects h2 {
@@ -192,14 +172,14 @@ nav ul li a:hover {
 
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .project-item img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    object-fit: cover; /* Ensures the image covers the area properly */
+    object-fit: cover;
     border-radius: 5px;
 }
 
@@ -211,8 +191,8 @@ nav ul li a:hover {
 /* Contact Us Section */
 #contact {
     background-color: #f9f9f9;
-    padding: 60px 0;
     text-align: center;
+    padding: 60px 0;
 }
 
 #contact h2 {
@@ -224,7 +204,6 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 form label {
@@ -232,7 +211,8 @@ form label {
     margin-bottom: 5px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 80%;
     padding: 10px;
     margin-bottom: 15px;
@@ -253,31 +233,27 @@ form button:hover {
     background-color: #004a6e;
 }
 
-form p {
-    font-size: 1rem;
-}
-
 /* Footer Section */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 0;
 }
 
-/* Make all images responsive */
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Global Image Styles */
 img {
-    max-width: 100%;  /* Ensures the image scales according to the container */
-    height: auto;     /* Maintains aspect ratio */
-    display: block;   /* Removes unwanted space below images */
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Responsive Layout Adjustments */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
     nav ul li {
         display: block;
         margin: 10px 0;
@@ -288,57 +264,14 @@ img {
         align-items: center;
     }
 
-    .about-content p {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .ceo-image {
-        margin-bottom: 20px;
-    }
-
     .project-gallery {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
-    }
-
-    #home .hero h2 {
-        font-size: 2.5rem;
-    }
-
-    #home .hero p {
-        font-size: 1rem;
-    }
-
-    #home .btn {
-        padding: 8px 16px;
-    }
-
-    form {
-        width: 90%;
-    }
-
-    form input, form textarea {
-        width: 100%;
-    }
-
-    footer {
-        font-size: 0.9rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
     .project-gallery {
-        grid-template-columns: 1fr; /* Stacks images vertically on mobile */
-    }
-
-    .project-item img {
-        width: 100%;  /* Ensure the image fills the container */
-        max-width: 100%;
-        height: auto;
+        grid-template-columns: 1fr;
     }
 
     #home .hero h2 {
@@ -350,15 +283,12 @@ img {
     }
 
     #home .btn {
-        font-size: 1rem;
+        font-size: 0.9rem;
         padding: 8px 16px;
     }
 
-    form input, form textarea {
-        padding: 8px;
-    }
-
-    footer {
-        font-size: 0.8rem;
+    form input,
+    form textarea {
+        width: 100%;
     }
 }
