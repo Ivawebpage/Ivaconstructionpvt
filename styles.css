@@ -111,6 +111,8 @@ nav ul li a:hover {
     width: 250px; /* Set a maximum width for the CEO image */
 }
 
+
+
 #ceo-video {
     text-align: center; /* Centers the video container */
     margin: 40px 0; /* Adds space around the video section */
@@ -121,6 +123,29 @@ nav ul li a:hover {
     max-width: 100%;
     height: auto; /* Ensures the aspect ratio is maintained */
     border-radius: 5px; /* Optional: Adds rounded corners to the video */
+}
+#ceo-video {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 40px 0;
+    overflow: hidden; /* Prevents anything from overflowing */
+}
+
+#ceo-video::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; /* Aspect ratio of 16:9 (height/width * 100) */
+}
+
+#ceo-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the container without distortion */
+    border-radius: 5px;
 }
 
 
