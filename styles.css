@@ -247,6 +247,7 @@ nav ul li a:hover {
 }
 
 #team {
+    text-align: center;
     padding: 4rem 0;
     background-color: #f9f9f9;
 }
