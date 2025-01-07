@@ -246,6 +246,48 @@ nav ul li a:hover {
     background: #f5f5f5;
 }
 
+#team {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.team-member {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member h3 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.team-member .position {
+    color: #666;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.team-member .description {
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+Last edited 
 /* Contact Us Section */
 #contact {
     background-color: #f9f9f9;
